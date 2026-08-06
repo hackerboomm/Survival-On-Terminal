@@ -1,5 +1,7 @@
 a = '>> '
 import time
+import globalEvents
+import userInventory
 
 print('Enter your user name:')
 userName = input(a)
@@ -54,23 +56,5 @@ print('Skill exps you gained from origin:')
 print(' - Power: ' + str(userPower) + ' exp')
 print(' - Intelligence: ' + str(userIntelligence) + ' exp')
 
-print(userTags)
-print(globalTags)
-
-print('You came on a tree:')
-print(' - Cut (>> C)')
-print(' - Pass (>> P)')
-interaction = input(a)
-
-if (interaction == 'C' and userTags[2] >= 5):
-    print('Trying to cut the tree...')
-    time.sleep(2)
-    print('You cut the tree:')
-    print(' - Log')
-elif (interaction == 'C' and userTags[2] < 5):
-    print('Trying to cut the tree...')
-    time.sleep(2)
-    print('Your power was not enough.')
-    print(' - You pass the tree')
-elif (interaction == 'P'):
-    print('You pass the tree')
+globalEvents.tree(userTags[2], globalTags[0])
+globalEvents.rock(userTags[2], globalTags[0])
