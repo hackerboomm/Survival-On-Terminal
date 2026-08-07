@@ -35,12 +35,16 @@ def crafting(material):
         userInventory[2] = str(materials[int(material)])
         print(' - + Stone Axe')
         userInventory[0] -= 1
+        print(' - -1 log')
         userInventory[1] -= 2
+        print(' - -2 rocks')
     elif (material == '2' and logCount >= 1 and rockCount >= 3):
         userInventory[3] = str(materials[int(material)])
         print(' - + Stone Pickaxe')
         userInventory[0] -= 1
+        print(' - -1 log')
         userInventory[1] -= 3
+        print(' - -3 rocks')
     else:
         print('You dont have enough resources to craft')
 
