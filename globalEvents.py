@@ -31,6 +31,34 @@ def rock(power, difficulty):
     elif (interaction == 'P'):
         print('You past the rock')
 
+def stone(power):
+    print('You came across a stone:')
+    print(' - Collect (>> C)')
+    print(' - Pass (>> P)')
+    interaction = input(a)
+    if (interaction == 'C' and power >= 1):
+        print('You collect the stone:')
+        userInventory.getStone()
+    elif (interaction == 'C' and power < 1):
+        print('You have not enough guts to collect it:')
+        print(' - You past the stone leaving behind')
+    elif (interaction == 'P'):
+        print('You past the stone')
+
+def stick(power):
+    print('You came across a stone:')
+    print(' - Collect (>> C)')
+    print(' - Pass (>> P)')
+    interaction = input(a)
+    if (interaction == 'C' and power >= 1):
+        print('You collect the stone:')
+        userInventory.getStone()
+    elif (interaction == 'C' and power < 1):
+        print('You have not enough guts to collect it:')
+        print(' - You past the stone leaving behind')
+    elif (interaction == 'P'):
+        print('You past the stone')
+
 def camp(intelligence):
     print('You found a camp:')
     print(' - Crafting (>> C)')

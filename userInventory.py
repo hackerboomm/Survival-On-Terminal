@@ -15,7 +15,7 @@ def getLog(difficulty):
         multiplier = 1
 
     userInventory[0] += multiplier
-    print(' - +' + str(multiplier) + ' logs')
+    print(' - +' + str(multiplier) + ' logs 🪵')
 
 def getRock(difficulty):
     if (difficulty == 'e'):
@@ -26,25 +26,29 @@ def getRock(difficulty):
         multiplier = 1
 
     userInventory[1] += multiplier
-    print(' - +' + str(multiplier) + ' stones')
+    print(' - +' + str(multiplier) + ' stones 🪨')
+
+def getStone():
+    userInventory[1] += 1
+    print(' - +1 stones 🪨')
 
 def crafting(material):
     logCount = userInventory[0]
     rockCount = userInventory[1]
     if (material == '1' and logCount >= 1 and rockCount >= 2):
         userInventory[2] = str(materials[int(material)])
-        print(' - + Stone Axe')
+        print(' - + Stone Axe 🪓')
         userInventory[0] -= 1
-        print(' - -1 log')
+        print(' - -1 log 🪵')
         userInventory[1] -= 2
-        print(' - -2 rocks')
+        print(' - -2 stones 🪨')
     elif (material == '2' and logCount >= 1 and rockCount >= 3):
         userInventory[3] = str(materials[int(material)])
-        print(' - + Stone Pickaxe')
+        print(' - + Stone Pickaxe ⛏️')
         userInventory[0] -= 1
-        print(' - -1 log')
+        print(' - -1 log 🪵')
         userInventory[1] -= 3
-        print(' - -3 rocks')
+        print(' - -3 stones 🪨')
     else:
         print('You dont have enough resources to craft')
 
