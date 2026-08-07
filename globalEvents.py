@@ -1,6 +1,7 @@
 a = '>> '
 
 import userInventory
+import globalPersons
 
 def tree(power, difficulty):
     print('You came across a tree:')
@@ -29,3 +30,30 @@ def rock(power, difficulty):
         print(' - You past the rock leaving behind')
     elif (interaction == 'P'):
         print('You past the rock')
+
+def camp(intelligence):
+    print('You found a camp:')
+    print(' - Crafting (>> C)')
+    print(' - Pass (>> P)')
+    interaction = input(a)
+    def craftingMenu():
+        print(''' - Select To Craft
+     * Stone Axe (>> 1)
+     * Stone Pickaxe (>> 2)''')
+        craftSelect = input(a)
+        if (craftSelect == '1' and intelligence >= 1):
+            userInventory.crafting('1')
+        elif (craftSelect == '2' and intelligence >= 5):
+            userInventory.crafting('2')
+        else:
+            print('You are so dumb to craft:')
+            print(' - You past the camp feeling upset about yourself')
+    if (interaction == 'C'):
+        print('You opened crafting menu:')
+        craftingMenu()
+    elif (interaction == 'P'):
+        print('You pass the camp without doing something')
+
+def person(personNumber, intelligence):
+    if (personNumber == 0):
+        globalPersons.pamukTheCat(intelligence)
