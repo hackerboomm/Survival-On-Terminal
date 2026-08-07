@@ -7,6 +7,7 @@ import userInventory
 print('Enter your user name:')
 userName = input(a)
 
+print('')
 print('Select difficulty:')
 print(' - Easy (>> E)')
 print(' - Normal (>> N)')
@@ -32,6 +33,7 @@ globalTags.append(globalDifficulty)
 userPower = 0
 userIntelligence = 0
 
+print('')
 print('Select origin:')
 print(' - Human (>> H)')
 print(' - Ork (>> O)')
@@ -55,11 +57,36 @@ userTags.append(userOrigin)
 userTags.append(userPower)
 userTags.append(userIntelligence)
 
+time.sleep(1)
+
+print('')
 print('Skill exps you gained from origin:')
 print(' - Power: ' + str(userPower) + ' exp')
 print(' - Intelligence: ' + str(userIntelligence) + ' exp')
 
+time.sleep(1)
 #globalEvents.tree(userTags[2], globalTags[0])
 #globalEvents.rock(userTags[2], globalTags[0])
-globalEvents.camp(userIntelligence)
+#globalEvents.camp(userIntelligence)
 #globalEvents.person(0, userIntelligence)
+print(f'''
+You started your journey {userTags[0]}. 
+In the Wonderful world of Survival On Terminal. 
+You have {userTags[2]} experience of power. You have {userTags[3]} experience of intelligence. 
+Get ready for the journey...''')
+time.sleep(2)
+
+while True:
+    print('-------------')
+    print('Travelling...')
+    print('-------------')
+    time.sleep(3)
+    eventNumber = random.randrange(0, 4)
+    if (eventNumber == 0):
+        globalEvents.tree(userTags[2], globalTags[0])
+    elif (eventNumber == 1):
+        globalEvents.rock(userTags[2], globalTags[0])
+    elif (eventNumber == 2):
+        globalEvents.camp(userIntelligence)
+    elif (eventNumber == 3):
+        globalEvents.person(0, userIntelligence)
