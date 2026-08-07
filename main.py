@@ -1,5 +1,6 @@
 a = '>> '
 import time
+import random
 import globalEvents
 import userInventory
 
@@ -19,6 +20,8 @@ elif (globalDifficulty == 'N') :
     globalDifficulty = 'n'
 elif (globalDifficulty == 'H') :
     globalDifficulty = 'h'
+else:
+    print('Please input correct to select difficulty')
 
 userTags = []
 globalTags = []
@@ -56,5 +59,7 @@ print('Skill exps you gained from origin:')
 print(' - Power: ' + str(userPower) + ' exp')
 print(' - Intelligence: ' + str(userIntelligence) + ' exp')
 
-globalEvents.tree(userTags[2], globalTags[0])
-globalEvents.rock(userTags[2], globalTags[0])
+#globalEvents.tree(userTags[2], globalTags[0])
+#globalEvents.rock(userTags[2], globalTags[0])
+globalEvents.camp(userIntelligence)
+#globalEvents.person(0, userIntelligence)
