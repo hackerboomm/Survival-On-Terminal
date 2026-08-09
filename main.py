@@ -61,13 +61,9 @@ time.sleep(1)
 
 print('')
 print('Skill exps you gained from origin:')
-<<<<<<< Updated upstream
-print(' - Power: ' + str(userPower) + ' exp')
-print(' - Intelligence: ' + str(userIntelligence) + ' exp')
-=======
 print(' - Power 💪: ' + str(userPower) + ' exp')
 print(' - Intelligence 💡: ' + str(userIntelligence) + ' exp')
->>>>>>> Stashed changes
+
 
 time.sleep(1)
 #globalEvents.tree(userTags[2], globalTags[0])
@@ -87,21 +83,14 @@ while True:
     print('Travelling...')
     print('-------------')
     time.sleep(3)
-<<<<<<< Updated upstream
-    eventNumber = random.randrange(0, 4)
-=======
     eventNumber = random.randrange(0, 7)
->>>>>>> Stashed changes
     if (eventNumber == 0):
         globalEvents.tree(userTags[2], globalTags[0])
     elif (eventNumber == 1):
         globalEvents.rock(userTags[2], globalTags[0])
     elif (eventNumber == 2):
-        globalEvents.camp(userIntelligence)
+        globalEvents.camp(userTags[3])
     elif (eventNumber == 3):
-<<<<<<< Updated upstream
-        globalEvents.person(0, userIntelligence)
-=======
         globalEvents.person(0, userTags[3])
     elif (eventNumber == 4):
         globalEvents.stone(userTags[3])
@@ -109,4 +98,3 @@ while True:
         globalEvents.stick(userTags[3])
     elif (eventNumber == 6):
         globalEvents.person(1, 'null')
->>>>>>> Stashed changes

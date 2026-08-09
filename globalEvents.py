@@ -31,8 +31,6 @@ def rock(power, difficulty):
     elif (interaction == 'P'):
         print('You past the rock')
 
-<<<<<<< Updated upstream
-=======
 def stone(power):
     print('You came across a stone:')
     print(' - Collect (>> C)')
@@ -61,7 +59,6 @@ def stick(power):
     elif (interaction == 'P'):
         print('You past the stick')
 
->>>>>>> Stashed changes
 def camp(intelligence):
     print('You found a camp:')
     print(' - Crafting (>> C)')
