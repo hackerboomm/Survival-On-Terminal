@@ -61,8 +61,13 @@ time.sleep(1)
 
 print('')
 print('Skill exps you gained from origin:')
+<<<<<<< Updated upstream
 print(' - Power: ' + str(userPower) + ' exp')
 print(' - Intelligence: ' + str(userIntelligence) + ' exp')
+=======
+print(' - Power 💪: ' + str(userPower) + ' exp')
+print(' - Intelligence 💡: ' + str(userIntelligence) + ' exp')
+>>>>>>> Stashed changes
 
 time.sleep(1)
 #globalEvents.tree(userTags[2], globalTags[0])
@@ -73,7 +78,8 @@ print(f'''
 You started your journey {userTags[0]}. 
 In the Wonderful world of Survival On Terminal. 
 You have {userTags[2]} experience of power. You have {userTags[3]} experience of intelligence. 
-Get ready for the journey...''')
+Get ready for the journey...
+''')
 time.sleep(2)
 
 while True:
@@ -81,7 +87,11 @@ while True:
     print('Travelling...')
     print('-------------')
     time.sleep(3)
+<<<<<<< Updated upstream
     eventNumber = random.randrange(0, 4)
+=======
+    eventNumber = random.randrange(0, 7)
+>>>>>>> Stashed changes
     if (eventNumber == 0):
         globalEvents.tree(userTags[2], globalTags[0])
     elif (eventNumber == 1):
@@ -89,4 +99,14 @@ while True:
     elif (eventNumber == 2):
         globalEvents.camp(userIntelligence)
     elif (eventNumber == 3):
+<<<<<<< Updated upstream
         globalEvents.person(0, userIntelligence)
+=======
+        globalEvents.person(0, userTags[3])
+    elif (eventNumber == 4):
+        globalEvents.stone(userTags[3])
+    elif (eventNumber == 5):
+        globalEvents.stick(userTags[3])
+    elif (eventNumber == 6):
+        globalEvents.person(1, 'null')
+>>>>>>> Stashed changes

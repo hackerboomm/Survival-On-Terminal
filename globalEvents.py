@@ -31,9 +31,41 @@ def rock(power, difficulty):
     elif (interaction == 'P'):
         print('You past the rock')
 
+<<<<<<< Updated upstream
+=======
+def stone(power):
+    print('You came across a stone:')
+    print(' - Collect (>> C)')
+    print(' - Pass (>> P)')
+    interaction = input(a)
+    if (interaction == 'C' and power >= 1):
+        print('You collect the stone:')
+        userInventory.getStone()
+    elif (interaction == 'C' and power < 1):
+        print('You have not enough guts to collect it:')
+        print(' - You past the stone leaving behind')
+    elif (interaction == 'P'):
+        print('You past the stone')
+
+def stick(power):
+    print('You came across a stick:')
+    print(' - Collect (>> C)')
+    print(' - Pass (>> P)')
+    interaction = input(a)
+    if (interaction == 'C' and power >= 1):
+        print('You collect the stick:')
+        userInventory.getStick()
+    elif (interaction == 'C' and power < 1):
+        print('You have not enough guts to collect it:')
+        print(' - You past the stick leaving behind')
+    elif (interaction == 'P'):
+        print('You past the stick')
+
+>>>>>>> Stashed changes
 def camp(intelligence):
     print('You found a camp:')
     print(' - Crafting (>> C)')
+    print(' - Inventory (>> I)')
     print(' - Pass (>> P)')
     interaction = input(a)
     def craftingMenu():
@@ -51,9 +83,13 @@ def camp(intelligence):
     if (interaction == 'C'):
         print('You opened crafting menu:')
         craftingMenu()
+    elif (interaction == 'I'):
+        userInventory.inventoryVisualizer()
     elif (interaction == 'P'):
-        print('You pass the camp without doing something')
+        print('You past the camp without doing something')
 
 def person(personNumber, intelligence):
     if (personNumber == 0):
         globalPersons.pamukTheCat(intelligence)
+    elif (personNumber == 1):
+        globalPersons.wanderingTrader()
