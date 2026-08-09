@@ -64,6 +64,7 @@ print('Skill exps you gained from origin:')
 print(' - Power 💪: ' + str(userPower) + ' exp')
 print(' - Intelligence 💡: ' + str(userIntelligence) + ' exp')
 
+
 time.sleep(1)
 #globalEvents.tree(userTags[2], globalTags[0])
 #globalEvents.rock(userTags[2], globalTags[0])
